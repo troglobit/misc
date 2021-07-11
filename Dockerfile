@@ -6,8 +6,8 @@ RUN echo "export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[0
     echo "alias poweroff='kill 1'" >> /etc/profile
 
 # Whenever possible, install tools using the distro package manager
-RUN apk add --quiet --no-cache tini git iproute2 tcpdump
+RUN apk add --quiet --no-cache tini alpine-sdk autoconf automake iproute2 tcpdump
 
-WORKDIR .
+WORKDIR /root
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["/bin/sh", "-i", "-l"]
