@@ -1,18 +1,12 @@
-# misc
-Misc. tests github/markdown/code all in the public domain
+Misc Tools and Helpers
+======================
+
+The intention of this project is to host various tools and helpers,
+like the Alpine Linux build and test docker container.  Which is
+used in other projects of mine, e.g. [the SMCRoute project][1].
+
+The container is automatically updated on pushes to the main branch,
+tagged `:latest`, and on releases, tagged `:vX.Y.Z`.
 
 
-```.dot
-graph "my-network" {
-        node [shape=record];
-        qn_template="netbox-os-zero";
-		qn_append="quiet";
-
-        server [label="server | { <eth0> eth0 | <eth1> eth1 }"];
-        client1 [label="client1 | { <eth0> eth0 }"];
-        client2 [label="client2 | { <eth0> eth0 }"];
-
-        server:eth0 -- client1:eth0;
-        server:eth1 -- client2:eth0;
-}
-```
+[1]: https://github.com/troglobit/smcroute/
