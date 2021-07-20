@@ -11,11 +11,10 @@ RUN apk add --quiet --no-cache tini alpine-sdk clang linux-headers autoconf auto
 
 WORKDIR /root
 
-# Nemesis isn't available in Alpine yet, drop man pages
-RUN wget https://github.com/libnet/nemesis/releases/download/v1.8/nemesis-1.8.tar.gz;	\
-    tar xf nemesis-1.8.tar.gz; cd nemesis-1.8/;					  	\
+# Nemesis isn't available in Alpine yet, install from git for IPv6 support
+RUN git clone https://github.com/libnet/nemesis.git && cd nemesis/ && ./autogen.sh; 	\
     ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var && make -j3;	\
-    make install-strip; rm -rf /usr/share/man; cd ..; rm -rf nemesis-1.8*
+    make install-strip; rm -rf /usr/share/man; cd ..; rm -rf nemesis*
 
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["/bin/sh", "-i", "-l"]
