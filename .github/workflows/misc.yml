@@ -1,0 +1,16 @@
+name: misc
+
+on:
+  push:
+    branches:
+      - 'misc'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: misc
+        run: |
+          sudo ./misc.sh
+
