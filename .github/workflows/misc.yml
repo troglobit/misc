@@ -6,7 +6,7 @@ on:
       - 'misc'
 
 jobs:
-  docker:
+  native:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,3 +14,16 @@ jobs:
         run: |
           sudo ./misc.sh
 
+  docker:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/troglobit/misc
+      options: --cap-add=NET_ADMIN
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v2
+      - name: misc
+        run: |
+          ./misc.sh
