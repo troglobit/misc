@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/troglobit/misc
-      options: --network=none --privileged
+      options: --privileged
     permissions:
       packages: write
       contents: read
