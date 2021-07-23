@@ -42,7 +42,7 @@ jobs:
         run: |
           ip netns add misc
           ip netns list
-          ip netns exec misc ./misc
+          ip netns exec misc ./misc.sh
           ip netns exec ip -br link
           ip netns exec ip -br addr
 
@@ -53,7 +53,7 @@ jobs:
       - name: misc
         run: |
           set -x
-          export MISC=$(pwd)/misc
+          export MISC=$(pwd)/misc.sh
           sudo ip netns add misc
           sudo ip netns list
           sudo ip netns exec misc $MISC
