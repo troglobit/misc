@@ -27,3 +27,21 @@ jobs:
       - name: misc
         run: |
           ./misc.sh
+
+  netns:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/troglobit/misc
+      options: --cap-add=NET_ADMIN
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v2
+      - name: misc
+        run: |
+          ip netns add misc
+          ip netns list
+          ip netns exec misc ./misc
+          ip netns exec ip -br link
+          ip netns exec ip -br addr
