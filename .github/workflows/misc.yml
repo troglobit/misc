@@ -40,11 +40,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: misc
         run: |
+          set -x
           ip netns add misc
           ip netns list
           ip netns exec misc ./misc.sh
-          ip netns exec ip -br link
-          ip netns exec ip -br addr
 
   netns:
     runs-on: ubuntu-latest
