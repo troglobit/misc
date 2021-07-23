@@ -28,7 +28,7 @@ jobs:
         run: |
           ./misc.sh
 
-  netns:
+  netnsdocker:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/troglobit/misc
@@ -45,3 +45,15 @@ jobs:
           ip netns exec misc ./misc
           ip netns exec ip -br link
           ip netns exec ip -br addr
+
+  netns:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: misc
+        run: |
+          sudo ip netns add misc
+          sudo ip netns list
+          sudo ip netns exec misc ./misc
+          sudo ip netns exec ip -br link
+          sudo ip netns exec ip -br addr
