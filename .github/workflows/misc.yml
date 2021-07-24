@@ -41,9 +41,7 @@ jobs:
       - name: misc
         run: |
           set -x
-          ip netns add misc
-          ip netns list
-          ip netns exec misc ./misc.sh
+          ip netns add misc && ip netns exec misc ./misc.sh
 
   netns:
     runs-on: ubuntu-latest
@@ -52,7 +50,8 @@ jobs:
       - name: misc
         run: |
           set -x
-          export MISC=$(pwd)/misc.sh
-          sudo ip netns add misc
-          sudo ip netns list
-          sudo ip netns exec misc $MISC
+          echo "====================="
+          ip netns add foo || echo "no foo for you, only misc"
+          ip netns list
+          echo "====================="
+          sudo ip netns add misc && sudo ip netns exec misc ./misc.sh
