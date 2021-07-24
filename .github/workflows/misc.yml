@@ -64,3 +64,18 @@ jobs:
         run: |
           set -x
           unshare -mrun ./misc.sh
+
+  dockerunshare:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/troglobit/misc
+      options: --cap-add=NET_ADMIN
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v2
+      - name: misc
+        run: |
+          set -x
+          unshare -mrun ./misc.sh
