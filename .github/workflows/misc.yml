@@ -55,3 +55,12 @@ jobs:
           ip netns list
           echo "====================="
           sudo ip netns add misc && sudo ip netns exec misc ./misc.sh
+
+  unshare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: misc
+        run: |
+          set -x
+          unsare -mrun ./misc.sh
