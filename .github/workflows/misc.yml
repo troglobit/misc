@@ -69,7 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/troglobit/misc
-      options: --cap-add=NET_ADMIN
+      options: --privileged
     permissions:
       packages: write
       contents: read
