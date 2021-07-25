@@ -7,7 +7,7 @@ RUN echo "export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[0
 
 # Whenever possible, install tools using the distro package manager
 RUN apk add --quiet --no-cache tini alpine-sdk clang linux-headers autoconf automake \
-	pkgconf iproute2 socat tcpdump tree libcap-dev libnet-dev
+	pkgconf iproute2 socat tcpdump tree tshark libcap-dev libnet-dev
 
 WORKDIR /root
 
