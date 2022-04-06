@@ -12,7 +12,7 @@
 # furnished to do so, subject to the following conditions:
 #
 # The above copyright notice and this permission notice shall be included in
-#     all copies or substantial portions of the Software.
+# all copies or substantial portions of the Software.
 #
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -22,12 +22,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-set -eu
-
 # It would have been nice to mount /dev as devtmpfs, but unfortunately
 # that's not possible if you're not privileged. For now tmpfs will
 # have to do.
 mount -n -t tmpfs none /dev
+# Silence BusyBox init
+touch /dev/null
 
 mount -t proc none /proc
 mount -t sysfs none /sys
@@ -40,8 +40,6 @@ if [ "$(ls -A /tmp)" ]; then
 else
 	mount -t tmpfs none /tmp
 fi
-
-mkdir -p "$FINIT_RCSD"
 
 tty=/dev/$(cat /sys/class/tty/console/active)
 mkfifo "$tty"
