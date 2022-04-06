@@ -75,7 +75,7 @@ run: all
 	     --mount-proc					\
 	     --uts --ipc --net					\
 	     chroot $(ROOTFS) /sbin/chrootsetup.sh /sbin/init;	\
-	@true
+	true
 
 clean:
 	@$(RM) -r $(ROOTFS)
