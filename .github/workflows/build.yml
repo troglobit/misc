@@ -1,0 +1,19 @@
+name: Bob the Builder
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create rootfs ...
+        run: |
+          make
+          ls -lR rootfs/
+      - name: Run Unit Tests
+        run: |
+          make run
