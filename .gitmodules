@@ -1,0 +1,3 @@
+[submodule "src/toolbox"]
+	path = src/toolbox
+	url = ../toolbox.git
