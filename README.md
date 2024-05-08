@@ -10,6 +10,7 @@ tagged `:latest`, and on releases, tagged `:vX.Y.Z`.
 
 Test of [custom link](#custom-id) reference.
 
+The following lorem ipsum text is from https://www.lipsum.com/
 
 #### The standard Lorem Ipsum passage, used since the 1500s
 
