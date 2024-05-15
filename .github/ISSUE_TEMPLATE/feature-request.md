@@ -22,9 +22,10 @@ Add any other context, e.g. existing YANG model(s), or possibly screenshots abou
 
 ## General Information
 
-You can help out by [sponsoring][1] development or [contributing][2] a
-pull request for its support.  Use this issue for discussions around
-this topic.
+Anyone can help out by [sponsoring][1] development of new features or
+[contributing][2] pull requests.
+
+Please use this issue for discussions related to the feature.
 
 [1]: https://github.com/kernelkit/infix/blob/main/.github/SUPPORT.md
 [2]: https://github.com/kernelkit/infix/blob/main/.github/CONTRIBUTING.md
