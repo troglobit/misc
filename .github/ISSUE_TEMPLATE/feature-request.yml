@@ -1,3 +1,4 @@
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
 name: "\U0001F6E0️ Feature request"
 description: Suggest a new feature, idea or improvement of the OS
 title: 'Add support for '
@@ -10,16 +11,16 @@ body:
     attributes:
       value: |
         **Thanks :heart: for taking the time to fill out this feature request report!**
-        We kindly ask that you search to see if an issue [already exists](https://github.com/wandb/wandb/issues?q=is%3Aissue+sort%3Acreated-desc+) for your feature.
 
-        We are also happy to accept contributions from our users. For more details see [here](https://github.com/wandb/wandb/blob/master/CONTRIBUTING.md).
+        We kindly ask that you search to see if an issue [already exists](https://github.com/kernelkit/infix/issues?q=is%3Aissue+sort%3Acreated-desc+) for your feature.
+
+        We are also happy to accept contributions from our users. For more details see [here](https://github.com/kernelkit/infix/blob/master/.github/CONTRIBUTING.md).
 
   - type: textarea
     attributes:
       label: Description
       description: |
-        **Is your feature request related to a problem? Please describe.**
-        A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+        A clear and concise description of what the problem is. Ex. I'm always frustrated when [...], or I'd like to see support for [...]
     validations:
       required: true
 
@@ -27,16 +28,14 @@ body:
     attributes:
       label: Suggested Solution
       description: |
-        **Describe the solution you'd like**
         A clear and concise description of what you want to happen.
     validations:
-      required: true
+      required: false
 
   - type: textarea
     attributes:
       label: Alternatives
       description: |
-        **Describe alternatives you've considered**
         A clear and concise description of any alternative solutions or features you've considered.
     validations:
       required: false
@@ -45,21 +44,19 @@ body:
     attributes:
       label: Additional Context
       description: |
-        Add any other context, e.g. existing YANG model(s), or possibly
-        screenshots about the feature request here.
+        Add any other context, e.g. existing YANG model(s), or possibly screenshots about the feature request here.
     validations:
       required: false
 
   - type: textarea
     attributes:
       label: General Information
-      description: |
-        Anyone can help out by [sponsoring][1] development of new features or
-        [contributing][2] pull requests.
+      value: |
+        Anyone can help out by [sponsoring][1] development of new features or [contributing][2] pull requests.
         
         Please use this issue for discussions related to the feature.
         
         [1]: https://github.com/kernelkit/infix/blob/main/.github/SUPPORT.md
         [2]: https://github.com/kernelkit/infix/blob/main/.github/CONTRIBUTING.md
     validations:
-      required: false
+      required: true

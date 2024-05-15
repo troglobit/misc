@@ -1,3 +1,4 @@
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
 name: "\U0001F41E Bug report"
 description: Create a bug report
 title: "[BUG]: "
@@ -10,16 +11,17 @@ body:
     attributes:
       value: |
         **Thanks :heart: for taking the time to fill out this bug report!**
-        We kindly ask that you search to see if an issue [already exists](https://github.com/wandb/wandb/issues?q=is%3Aissue+sort%3Acreated-desc+) for the bug you encountered.
+
+        We kindly ask that you search to see if an issue [already exists](https://github.com/kernelkit/infix/issues?q=is%3Aissue+sort%3Acreated-desc+) for the bug you encountered.
 
   - type: textarea
     attributes:
       label: Current Behavior
       description: |
         A clear and concise description of the issue you're experiencing.
-        
+      value: |
         For code snippets, logs, commands, etc., please use triple backticks:
-        
+       
         ```
         admin@infix-c0-ff-ee:/> show log
         ...
@@ -28,14 +30,14 @@ body:
         - (press h for help or q to quit)
         ```
     validations:
-      required: false
+      required: true
 
   - type: textarea
     attributes:
       label: Expected Behavior
       description: |
         A clear and concise description of what you expected to happen.
-        
+      value: |
         ```
         admin@infix-c0-ff-ee:/> show log
         ...
@@ -44,15 +46,15 @@ body:
         - (press h for help or q to quit)
         ```
     validations:
-      required: false
+      required: true
 
   - type: textarea
     attributes:
       label: Steps To Reproduce
       description: Steps to reproduce the issue.
-      placeholder: |
+      value: |
         1. Built from source
-        2. Upgraded to latest release, vYY.MM.P
+        2. Upgrade to latest release, vYY.MM.P
         3. Factory reset
         4. Enable feature
         5. Check the logs/show command/operational status
