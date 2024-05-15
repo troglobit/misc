@@ -38,9 +38,8 @@ body:
         Appended to all feature requests for future readers.
       value: |
         Anyone can help out by [sponsoring][1] development of new features or [contributing][2] pull requests.
-        
         Please use this issue for discussions related to the feature.
-        
+      
         [1]: https://github.com/kernelkit/infix/blob/main/.github/SUPPORT.md
         [2]: https://github.com/kernelkit/infix/blob/main/.github/CONTRIBUTING.md
     validations:
