@@ -2,8 +2,8 @@ name: "\U0001F41E Bug report"
 about: Create a bug report
 title: "[BUG]: "
 labels:
-  - bug
-  - triage
+  - "bug"
+  - "triage"
 
 body:
   - type: markdown
