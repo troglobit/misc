@@ -21,12 +21,9 @@ body:
         A clear and concise description of the issue you're experiencing.
       value: |
         For code snippets, logs, commands, etc., please use triple backticks:
-       
         ```
         admin@infix-c0-ff-ee:/> show log
-        ...
         May 15 07:21:02 infix-00-00-00 container[3192]: Failed creating container test from curios-httpd-v24.03.0
-        ...
         - (press h for help or q to quit)
         ```
     validations:
@@ -40,9 +37,7 @@ body:
       value: |
         ```
         admin@infix-c0-ff-ee:/> show log
-        ...
         May 15 07:21:02 infix-c0-ff-ee container[3192]: Successfully created container test from curios-httpd-v24.03.0
-        ...
         - (press h for help or q to quit)
         ```
     validations:
