@@ -1,5 +1,8 @@
 contact_links:
+  - name: "Look for my Issue"
+    url: https://github.com/kernelkit/infix/issues?q=is%3Aissue+sort%3Acreated-desc+
+    about: Thank ❤️ you for your time! We kindly ask that you first check if an issue already exists.
   - name: "Discussions and Q&A"
     url: https://github.com/kernelkit/infix/discussions
-    about: Please ask and answer questions here.
+    about: Discussions are perfect for quick questions, bouncing ideas, and things that may be a bug.
 

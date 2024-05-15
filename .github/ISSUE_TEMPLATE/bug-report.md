@@ -4,10 +4,7 @@ about: Create a bug report
 title: "[BUG]"
 labels: bug, triage
 assignees: ''
-
 ---
-
-For Q&A and support, please use the [Discussion forum][1].
 
 # Description
 

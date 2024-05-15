@@ -4,11 +4,7 @@ about: Suggest a new feature, idea or improvement of the OS
 title: ''
 labels: enhancement, feature, triage
 assignees: ''
-
 ---
-
-> **Thank :heart: you for taking the time to fill out this feature request report!**
-> We kindly ask that you first check if an [issue already exists](https://github.com/kernelkit/infix/issues?q=is%3Aissue+sort%3Acreated-desc+).
 
 ## Description
 
