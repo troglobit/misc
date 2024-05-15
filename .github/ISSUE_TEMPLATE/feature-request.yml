@@ -18,7 +18,8 @@ body:
     attributes:
       label: Description
       description: |
-        A clear and concise description of what the problem is. Ex. I'm always frustrated when [...], or I'd like to see support for [...]
+        A clear and concise description of the problem or missing feature.
+        **Example:** *I'm always frustrated when [...]*, or *I'd like to see support for [...]*
     validations:
       required: true
 
@@ -33,6 +34,8 @@ body:
   - type: textarea
     attributes:
       label: General Information
+      description: |
+        Appended to all feature requests for future readers.
       value: |
         Anyone can help out by [sponsoring][1] development of new features or [contributing][2] pull requests.
         
