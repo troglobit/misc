@@ -1,7 +1,7 @@
 # https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
 name: "\U0001F41E Bug report"
 description: Create a bug report
-title: "[BUG]: "
+title: ""
 labels:
   - "bug"
   - "triage"
@@ -10,7 +10,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Thanks :heart: for taking the time to fill out this bug report!**
+        **Thank :heart: you for taking the time to fill out this bug report!**
 
         We kindly ask that you search to see if an issue [already exists](https://github.com/kernelkit/infix/issues?q=is%3Aissue+sort%3Acreated-desc+) for the bug you encountered.
 
@@ -46,8 +46,9 @@ body:
   - type: textarea
     attributes:
       label: Steps To Reproduce
-      description: Steps to reproduce the issue.
-      value: |
+      description: |
+        Steps to reproduce the issue.  For example:
+
         1. Built from source
         2. Upgrade to latest release, vYY.MM.P
         3. Factory reset

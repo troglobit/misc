@@ -10,7 +10,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Thanks :heart: for taking the time to fill out this feature request report!**
+        **Thank :heart: you for taking the time to fill out this feature request!**
 
         We kindly ask that you search to see if an issue [already exists](https://github.com/kernelkit/infix/issues?q=is%3Aissue+sort%3Acreated-desc+) for your feature.  We are also happy to accept contributions from our users. For details see [CONTRIBUTING](https://github.com/kernelkit/infix/blob/master/.github/CONTRIBUTING.md).
 
