@@ -1,7 +1,6 @@
 # https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
 name: "\U0001F41E Bug report"
 description: Create a bug report
-title: ""
 labels:
   - "bug"
   - "triage"
