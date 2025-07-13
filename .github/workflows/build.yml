@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - '**'
+    paths:
+      - 'skeleton/**'
+      - 'src/**'
+      - 'Makefile'
 
 jobs:
   build:
